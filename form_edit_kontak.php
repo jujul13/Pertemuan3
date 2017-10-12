@@ -1,5 +1,6 @@
 <?php // filename: form_edit_kontak.php
 	include"koneksi.php";
+	
 	$id = $_GET['id'];
 	//query
 	$query = "SELECT * FROM kontak
@@ -38,7 +39,10 @@
 <div id="konten">
 	<h2>Edit Kontak</h2>
 	<form action="proses_edit_kontak.php" method="post">
+	
+	<tbody>
 		Nama:
+		
 		<input type="text" value="<?php echo $row['nama']; ?>"name="nama" />
 		<br />
 		Phone:
@@ -47,8 +51,9 @@
 		Email:
 		<input type="text" value="<?php echo $row['email']; ?>"name="email" />
 		<br />
+	
 		Kategori:
-		<select name="kategori">
+		<select name="kategori"  />
 		<?php
 		$db = mysqli_connect("localhost","root", "", "kalbis_web");
 		$query = "select * from kategori";
@@ -63,6 +68,7 @@
 		<input type="hidden" name="id" value="<?php echo $row['id']; ?>" />
 		<input type="submit" value="Simpan" />
 	</form>
+	</tbody>
 </div>
 </body>
 </html>

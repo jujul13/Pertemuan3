@@ -42,7 +42,7 @@
 </div>
 <div id="search">
 	<b>Search: </b>
-	<form action="" method="post">
+	<form action="search.php" method="post">
 		<input type="text" name="search_text" />
 		<input type="submit" name="cari" value="Cari" />
 	</form>
