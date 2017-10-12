@@ -1,7 +1,3 @@
-<?php // filename: form_tambah_kategori.php
-	
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,13 +23,36 @@
 	</ul>
 </div>
 <div id="konten">
-	<h2>Tambah Kategori</h2>
-	<form action="proses_tambah_kategori.php" method="post">
-		Keterangan:
-		<input type="text" name="ket" />
+	<h2>Tambah Kontak</h2>
+	<form action="proses_tambah_kontak.php" method="post">
+	<tbody>
+		Nama:
+		<input type="text" name="nama" />
 		<br />
-		<input type="submit" value="Simpan" />
+		Phone:
+		<input type="text" name="phone" />
+		<br />
+		Email:
+		<input type="text" name="email" />
+		<br />
+		Kategori:
+		<select name="kategori"/> 
+		<?php
+		include("koneksi.php");
+		$db = mysqli_connect("localhost","root", "", "kalbis_web");
+		$query = "select * from kategori";
+		$hasil = mysqli_query($db,$query);
+		while($data=mysqli_fetch_array($hasil)){
+		echo "<option value=$data[id]>$data[keterangan]</option>";
+		
+		}
+		?>
+		<br />
+		</select>	
+		<input type="submit" name="submit" value="Simpan" />
+		
 	</form>
+	</tbody>
 </div>
 </body>
 </html>
