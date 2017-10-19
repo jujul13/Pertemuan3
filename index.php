@@ -78,6 +78,17 @@ if(isset($_POST['filter'])){
 </div>
 <!-- search -->
 
+
+<!-- Upload Gambar -->
+<div id="Gambar">
+	<b>Upload Gambar </b>
+	<form action="proses_upload.php" method="POST" enctype="multipart/form-data">
+		<input type="file" name="gambar" />
+		<input type="submit" name="Upload"  />
+	</form>
+</div>
+<!-- Upload Gambar -->
+
 <div id="konten">
 	<h2>Kontak</h2>
 	<a href="form_tambah_kontak.php">Tambah Kontak</a>
@@ -85,6 +96,7 @@ if(isset($_POST['filter'])){
 		<thead>
 			<tr>
 				<th>No.</th>
+				<th>Gambar</th>
 				<th>Nama</th>
 				<th>Hp.</th>
 				<th>Email</th>
