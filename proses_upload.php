@@ -12,6 +12,8 @@ $ext_boleh = Array("jpg", "png", "gif");
 $size = $_FILES['gambar']['size'];
 $sumber = $_FILES['gambar']['tmp_name'];
 $tujuan = "uploads/" . $_FILES['gambar']['name'];
+$sql = "INSERT INTO gambar values (null, '$sumber')";
+$aksi = mysql_query($sql, $db);
 if(in_array($ext, $ext_boleh) && $size <= 2*1024*1024){
 	echo "file valid";
 	move_uploaded_file($sumber, $tujuan);

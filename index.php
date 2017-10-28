@@ -92,11 +92,11 @@ if(isset($_POST['filter'])){
 <div id="konten">
 	<h2>Kontak</h2>
 	<a href="form_tambah_kontak.php">Tambah Kontak</a>
+	
 	<table border="1">
 		<thead>
 			<tr>
 				<th>No.</th>
-				<th>Gambar</th>
 				<th>Nama</th>
 				<th>Hp.</th>
 				<th>Email</th>
@@ -125,6 +125,8 @@ if(isset($_POST['filter'])){
 			<?php
 		}
 		?>
+		
+		
 		</tbody>
 	</table>
 </div>
